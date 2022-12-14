@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+--Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+--Soft-red: hsl(14, 88%, 65%);
+--Soft-violet: hsl(273, 75%, 66%);
+--Soft-blue: hsl(240, 73%, 65%);
+--Very-dark-grayish-blue: hsl(237, 12%, 33%);
+--Dark-grayish-blue: hsl(240, 6%, 50%);
+--Light-grayish-blue: hsl(240, 5%, 91%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+  background: linear-gradient(180deg, var(--Soft-violet), var(--Soft-blue));
+  background-repeat: no-repeat;
+  font-size: 12px;
+  padding: 9rem 0 5rem;
+}
+
+main{
+  background-color: var(--White);
+  width: 20.625rem;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 .5rem 2.5rem rgba(0,0,0,0.5);
+  padding: 3rem 1.5rem;
+}
+
+.woman{
+  display: block;
+  width: 15rem;
+  margin: -9.8rem auto 0;
+}
+
+.bg-pattern{
+  display: block;
+  width: 15rem;
+  margin: -4.5rem auto 0;
+}
+
+h1{
+  color: var(--Very-dark-desaturated-blue);
+  margin: 1.5rem 0 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+details{
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--Light-grayish-blue);
+  font-size: 1.15em;
+}
+
+details p{
+  color: var(--Dark-grayish-blue);
+  font-size: .95em;
+  line-height: 1.5;
+  margin-top: .9rem;
+}
+
+summary{
+  color: var(--Very-dark-desaturated-blue);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+summary:hover {
+  cursor: pointer;
+  color: var(--Soft-red);
+}
+
+summary img{
+  transition: .5s ease;
+}
+
+details[open] summary{
+  font-weight:700;
+}
+
+details[open] summary img{
+  transform: rotate(180deg);
+}
+
+
+/* ----------  DESKTOP  ---------- */
+@media (min-width: 1000px){
+  body{
+    min-height: 100vh;
+    padding: 4rem 0;
+    display: grid;
+    place-content: center;
+  }
+
+  main{
+    width: 57.75rem;
+    display: flex;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: -35rem;
+    background-position-y: -17rem;
+    overflow: hidden;
+    padding: 4.5rem 0;
+  }
+
+  section{
+    width: 100%;
+  }
+
+  .woman{
+    width: 29rem;
+    margin: -.625rem 0 0 -6.25rem;
+  }
+
+  .bg-pattern{
+    width: 12rem;
+    position: absolute;
+    margin: -13.6rem 0 0 -7.4rem;
+  }
+
+  .card__text{
+    padding: 0 7rem 0 0;
+  }
+
+  h1{
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+  }
+
+}
